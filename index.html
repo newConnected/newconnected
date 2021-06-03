@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>newConnected</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='textToSpeech.js'></script>
+    <script src='speechRecog.js'></script>
+    <script src='chatBot.js'></script>
+    <script src='languageRecog.js'></script>
+    <script src='grammarRecog.js'></script>
+    <script src='saveData.js'></script>
+</head>
+    <body>
+        <div class="menuBar">
+            <button class="homeButton" onclick="window.location.href='index.html'"><b>NewConnected</b></button>
+            <button class="downloadsButton" onclick="window.location.href='downloads.html'">download page</button>
+        </div>
+
+        <button class="TTSButton" id="TTSButton" onclick="TTSSpeak()">Text to speech</button>
+        <input type="text" class="TTSInput" id="txtInput" oninput="chatProcess()" onchange="chatProcess()">
+        <button class="chatBot" id="chatBotOut">Hey!</button>
+        <button class="langRecog" id="langRecogOut">English</button>
+        <input type="text" class="grammarRecog" id="grammarRecog" placeholder="grammar fix">
+
+        <button id='btnGiveCommand' class="STTButton" onclick="startListening()">Start talking.</button>
+        <button id='message' class="STTInput"></button>
+
+        <a href="https://drive.google.com/drive/folders/1oa1jOco0OmJsY_Sg1fIvy-hsPrFAcFQb?usp=sharing" class="MobileApp">
+            download the mobile app (latest release)
+        </a>
+    </body>
+</html>
