@@ -140,6 +140,9 @@ function fixLanguage(sentence, languageUse) {
                 sentenceStructure = 1
                 //question
             }
+            if (sentence.includes("mnu") && sentenceWords[a] == "mnu") {
+                sentence = sentence.replace("mnu", "maakt niet uit")
+            }
         }
     }
     if (sentence.charAt(sentence.length - 1) != "." && sentence.charAt(sentence.length - 1) != "!" && sentence.charAt(sentence.length - 1) != "?") {

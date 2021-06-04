@@ -1,6 +1,6 @@
 body {
     background: rgb(36,0,20);
-    background: linear-gradient(90deg,rgb(0, 68, 255) 0%, rgb(0, 255, 170) 100%);
+    background: linear-gradient(90deg,rgb(0, 68, 255) 0%, rgb(0, 255, 128) 100%);
 }
 .menuBar {
     position: absolute;
@@ -258,14 +258,32 @@ body {
 }
 
 .option1 {
-    top: 26%
+    top: 26%;
 }
 .option2 {
-    top: 33%
+    top: 33%;
 }
 .option3 {
-    top: 40%
+    top: 40%;
 }
 .option4 {
-    top: 47%
+    top: 47%;
+}
+.option5 {
+    top: 54%;
+}
+.option1:hover {
+    background: #5c5c5c;
+}
+.option2:hover {
+    background: #5c5c5c;
+}
+.option3:hover {
+    background: #5c5c5c;
+}
+.option4:hover {
+    background: #5c5c5c;
+}
+.option5:hover {
+    background: #5c5c5c;
 }

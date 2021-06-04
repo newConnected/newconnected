@@ -1,10 +1,38 @@
 optionsVisible = false
+languageRecogButton = true
+languageSelected = 0
+langaugesAvailable = [
+    "English",
+    "Dutch",
+    "French",
+    "Deutch"]
 
 function chatProcess2() {
     message = document.getElementById("txtInput").value
     message = grammarFix(message)
-    document.getElementById("langRecogOut").innerHTML = langRecog(message)
-    return langRecog(message)
+    if (languageRecogButton == true) {
+        recognizedLanguage = langRecog(message)
+    } else {
+        recognizedLanguage = langaugesAvailable[languageSelected]
+        if (recognizedLanguage == "English") {
+            document.getElementById("btnGiveCommand").innerHTML = "Please say something"
+            document.getElementById("TTSButton").innerHTML = "Text to speech"
+        }
+        if (recognizedLanguage == "Dutch") {
+            document.getElementById("btnGiveCommand").innerHTML = "Zeg alstublieft iets"
+            document.getElementById("TTSButton").innerHTML = "Tekst naar spraak"
+        }
+        if (recognizedLanguage == "French") {
+            document.getElementById("btnGiveCommand").innerHTML = "S'il te plait dis quelque chose"
+            document.getElementById("TTSButton").innerHTML = "Texte pour parler"
+        }
+        if (recognizedLanguage == "Deutch") {
+            document.getElementById("btnGiveCommand").innerHTML = "Bitte sag was"
+            document.getElementById("TTSButton").innerHTML = "Text zu Sprache"
+        }
+    }
+    document.getElementById("langRecogOut").innerHTML = "language: " + recognizedLanguage
+    return recognizedLanguage
 }
 function langRecog(sentence) {
     dataIn = [
@@ -13,10 +41,10 @@ function langRecog(sentence) {
     "bonjour ca va je vais bien je suis desole je m'appelle",
     "hallo wie geht's es dir mir geht es gut wer bist du es tut mir leid ich bin"]
     dataOut = [
-    "English",
-    "Dutch",
-    "French",
-    "Deutch"]
+        "English",
+        "Dutch",
+        "French",
+        "Deutch"]
     values = [
     0,
     0,
@@ -93,4 +121,30 @@ function selectedLanguage() {
         document.getElementById("options").style.display = "none"
         optionsVisible = false
     }
+}
+
+function language1() {
+    languageSelected = 0
+    languageRecogButton = false
+    selectedLanguage()
+}
+function language2() {
+    languageSelected = 1
+    languageRecogButton = false
+    selectedLanguage()
+}
+function language3() {
+    languageSelected = 2
+    languageRecogButton = false
+    selectedLanguage()
+}
+function language4() {
+    languageSelected = 3
+    languageRecogButton = false
+    selectedLanguage()
+}
+function language5() {
+    languageSelected = 0
+    languageRecogButton = true
+    selectedLanguage()
 }
