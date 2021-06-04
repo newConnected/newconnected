@@ -22,7 +22,7 @@
         <button class="TTSButton" id="TTSButton" onclick="TTSSpeak()">Text to speech</button>
         <input type="text" class="TTSInput" id="txtInput" oninput="chatProcess()" onchange="chatProcess()">
         <button class="chatBot" id="chatBotOut">Hey!</button>
-        <button class="langRecog" id="langRecogOut">English</button>
+        <button class="langRecog" id="langRecogOut" onclick="selectedLanguage()">language: English</button>
         <textarea type="text" class="grammarRecog" id="grammarRecog" placeholder="grammar fix" rows="4"></textarea>
 
         <button id='btnGiveCommand' class="STTButton" onclick="startListening()">Start talking.</button>
@@ -31,5 +31,11 @@
         <a href="https://drive.google.com/drive/folders/1oa1jOco0OmJsY_Sg1fIvy-hsPrFAcFQb?usp=sharing" class="MobileApp">
             download the mobile app (latest release)
         </a>
+        <ul id="options" style="display: none;">
+            <li><button class="option_layout option1">english</button></li>
+            <li><button class="option_layout option2">deutch</button></li>
+            <li><button class="option_layout option3">dutch</button></li>
+            <li><button class="option_layout option4">french</button></li>
+          </ul>
     </body>
 </html>

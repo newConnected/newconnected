@@ -18,7 +18,7 @@ function fixGrammar() {
     if (input == ""){
         output.value = ""
     } else {
-        output.value = Out
+        output.value = Out  
     }
 }
 
@@ -26,6 +26,7 @@ function fixLanguage(sentence, languageUse) {
     sentenceStructure = 0
     sentenceWords = grammarFix(sentence.toLowerCase())
     sentenceWords = sentenceWords.split(" ")
+    structureSentence = sentence.split(" ")
     sentence = sentence.charAt(0).toUpperCase() + sentence.slice(1)
     if (languageUse == 0) {
         //normal sentence
@@ -33,6 +34,12 @@ function fixLanguage(sentence, languageUse) {
             sentence = sentence.replace(";", ",")
         }
         for (a = 0; a < sentenceWords.length; a++) {
+            for (b = 0; b < sentence.length; b++) {
+                if (sentence[b] == "." || sentence[b] == "?" || sentence[b] == "!") {
+                    sentence = sentence.slice(0, b + 2) + sentence.charAt(b + 2).toUpperCase() + sentence.slice(b + 3)
+                    sentenceStructure = 0
+                }
+            }
             if (sentenceWords[a] == "what") {
                 sentenceStructure = 1
                 //question
@@ -42,6 +49,10 @@ function fixLanguage(sentence, languageUse) {
                 //question
             }
             if (sentenceWords[a] == "can") {
+                sentenceStructure = 1
+                //question
+            }
+            if (sentenceWords[a] == "when") {
                 sentenceStructure = 1
                 //question
             }
@@ -102,6 +113,32 @@ function fixLanguage(sentence, languageUse) {
             }
             if (sentence.includes("i") && sentenceWords[a] == "i") {
                 sentence = sentence.replace(" i ", " I ")
+            }
+        }
+    }
+    if (languageUse == 1) {
+        for (a = 0; a < sentenceWords.length; a++) {
+            for (b = 0; b < sentence.length; b++) {
+                if (sentence[b] == "." || sentence[b] == "?" || sentence[b] == "!") {
+                    sentence = sentence.slice(0, b + 2) + sentence.charAt(b + 2).toUpperCase() + sentence.slice(b + 3)
+                    sentenceStructure = 0
+                }
+            }
+            if (sentenceWords[a] == "wat") {
+                sentenceStructure = 1
+                //question
+            }
+            if (sentenceWords[a] == "hoe") {
+                sentenceStructure = 1
+                //question
+            }
+            if (sentenceWords[a] == "waarom") {
+                sentenceStructure = 1
+                //question
+            }
+            if (sentenceWords[a] == "waneer") {
+                sentenceStructure = 1
+                //question
             }
         }
     }

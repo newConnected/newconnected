@@ -1,5 +1,8 @@
+optionsVisible = false
+
 function chatProcess2() {
     message = document.getElementById("txtInput").value
+    message = grammarFix(message)
     document.getElementById("langRecogOut").innerHTML = langRecog(message)
     return langRecog(message)
 }
@@ -51,12 +54,11 @@ function langRecog(sentence) {
             }
             for (z_1 = 0; z_1 < processOut.length; z_1++) {
                 if (processOut[z_1].includes(processIn[z_1]) && wordExists == false) {
-                    values[x] = values[x] + 1;
+                    values[x] = values[x] + 0.5;
                 }
             }
         }
     }
-    console.log(values)
     m = Math.max(...values);
     p = values.indexOf(m);
     if (m == 0) {
@@ -79,4 +81,16 @@ function langRecog(sentence) {
         document.getElementById("TTSButton").innerHTML = "Text zu Sprache"
     }
     return dataOut[p];
+}
+
+function selectedLanguage() {
+    if (optionsVisible == false) {
+        document.getElementById("langRecogOut").innerHTML = "select language"
+        document.getElementById("options").style.display = "table"
+        optionsVisible = true
+    } else {
+        document.getElementById("langRecogOut").innerHTML = "language: " + chatProcess2()
+        document.getElementById("options").style.display = "none"
+        optionsVisible = false
+    }
 }
