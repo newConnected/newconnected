@@ -130,5 +130,8 @@ function grammarFix(sentence) {
     while (sentence.includes('"')) {
         sentence = sentence.replace('"', '')
     }
+    while (sentence.includes(',')) {
+        sentence = sentence.replace(',', '')
+    }
     return sentence
 }
