@@ -20,6 +20,7 @@ function fixGrammar() {
     } else {
         output.value = Out  
     }
+    addEmotion()
 }
 
 function fixLanguage(sentence, languageUse) {
@@ -29,7 +30,8 @@ function fixLanguage(sentence, languageUse) {
     structureSentence = sentence.split(" ")
     sentence = sentence.charAt(0).toUpperCase() + sentence.slice(1)
     if (languageUse == 0) {
-        //normal sentence
+        questionWords = ["what", "how", "can", "when", "who", "why"]
+
         while (sentence.includes(";")) {
             sentence = sentence.replace(";", ",")
         }
@@ -40,21 +42,11 @@ function fixLanguage(sentence, languageUse) {
                     sentenceStructure = 0
                 }
             }
-            if (sentenceWords[a] == "what") {
-                sentenceStructure = 1
-                //question
-            }
-            if (sentenceWords[a] == "how") {
-                sentenceStructure = 1
-                //question
-            }
-            if (sentenceWords[a] == "can") {
-                sentenceStructure = 1
-                //question
-            }
-            if (sentenceWords[a] == "when") {
-                sentenceStructure = 1
-                //question
+            for (c = 0; c < questionWords.length; c++) {
+                if (sentenceWords[a] == questionWords[c]) {
+                    sentenceStructure = 1
+                    //question
+                }
             }
             if (sentence.includes("hru")  && sentenceWords[a] == "hru") {
                 sentence = sentence.replace("hru", "how are you")
@@ -117,6 +109,15 @@ function fixLanguage(sentence, languageUse) {
         }
     }
     if (languageUse == 1) {
+        questionWords = ["wat", "hoe", "waneer", "wie", "waarom"]
+        abbrevations = [
+            ["aub", "alstublieft"],
+            ["ajb", "alstjeblieft"],
+            ["abn", "algemeen beschaaft nederlands"],
+            ["nap", "normaal amsterdams peil"],
+            ["mnu", "maakt niet uit"]
+        ]
+
         for (a = 0; a < sentenceWords.length; a++) {
             for (b = 0; b < sentence.length; b++) {
                 if (sentence[b] == "." || sentence[b] == "?" || sentence[b] == "!") {
@@ -124,24 +125,16 @@ function fixLanguage(sentence, languageUse) {
                     sentenceStructure = 0
                 }
             }
-            if (sentenceWords[a] == "wat") {
-                sentenceStructure = 1
-                //question
+            for (c = 0; c < questionWords.length; c++) {
+                if (sentenceWords[a] == questionWords[c]) {
+                    sentenceStructure = 1
+                    //question
+                }
             }
-            if (sentenceWords[a] == "hoe") {
-                sentenceStructure = 1
-                //question
-            }
-            if (sentenceWords[a] == "waarom") {
-                sentenceStructure = 1
-                //question
-            }
-            if (sentenceWords[a] == "waneer") {
-                sentenceStructure = 1
-                //question
-            }
-            if (sentence.includes("mnu") && sentenceWords[a] == "mnu") {
-                sentence = sentence.replace("mnu", "maakt niet uit")
+            for (c = 0; c < abbrevations.length; c++) {
+                if (sentence.includes(abbrevations[c][0]) && sentenceWords[a] == abbrevations[c][0]) {
+                    sentence = sentence.replace(abbrevations[c][0], abbrevations[c][1])
+                }
             }
         }
     }

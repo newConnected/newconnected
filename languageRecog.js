@@ -127,24 +127,29 @@ function language1() {
     languageSelected = 0
     languageRecogButton = false
     selectedLanguage()
+    chatProcess()
 }
 function language2() {
     languageSelected = 1
     languageRecogButton = false
     selectedLanguage()
+    chatProcess()
 }
 function language3() {
     languageSelected = 2
     languageRecogButton = false
     selectedLanguage()
+    chatProcess()
 }
 function language4() {
     languageSelected = 3
     languageRecogButton = false
     selectedLanguage()
+    chatProcess()
 }
 function language5() {
     languageSelected = 0
     languageRecogButton = true
     selectedLanguage()
+    chatProcess()
 }
