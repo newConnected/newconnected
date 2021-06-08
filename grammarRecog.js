@@ -28,6 +28,7 @@ function fixLanguage(sentence, languageUse) {
     sentenceWords = grammarFix(sentence.toLowerCase())
     sentenceWords = sentenceWords.split(" ")
     structureSentence = sentence.split(" ")
+    sentence = sentence.toLowerCase()
     sentence = sentence.charAt(0).toUpperCase() + sentence.slice(1)
     if (languageUse == 0) {
         questionWords = ["what", "how", "can", "when", "who", "why"]
@@ -48,63 +49,74 @@ function fixLanguage(sentence, languageUse) {
                     //question
                 }
             }
-            if (sentence.includes("hru")  && sentenceWords[a] == "hru") {
+            if (sentenceWords[a] == "is") {
+                if (sentenceWords.length >= a + 1) {
+                    if (sentenceWords[a + 1] == "that") {
+                        sentenceStructure = 1
+                        //question
+                    }
+                }
+            }
+            if (sentenceWords[a] == "hru") {
                 sentence = sentence.replace("hru", "how are you")
                 sentenceStructure = 1
                 //question
             }
-            if (sentence.includes("what's") && sentenceWords[a] == "what's") {
+            if (sentenceWords[a] == "what's") {
                 sentence = sentence.replace("what's", "what is")
                 sentenceStructure = 1
                 //question
             }
-            if (sentence.includes("asap") && sentenceWords[a] == "asap") {
+            if (sentenceWords[a] == "asap") {
                 sentence = sentence.replace("asap", "as soon as possible")
             }
-            if (sentence.includes("am") && sentenceWords[a] == "am" && !sentence.includes("i am") && !sentence.includes("I am")) {
+            if (sentenceWords[a] == "am" && !sentence.includes("i am") && !sentence.includes("I am")) {
                 sentence = sentence.replace("am", "before midday")
             }
-            if (sentence.includes("pm") && sentenceWords[a] == "pm") {
+            if (sentenceWords[a] == "pm") {
                 sentence = sentence.replace("pm", "after midday")
             }
-            if (sentence.includes("lmk") && sentenceWords[a] == "lmk") {
+            if (sentenceWords[a] == "lmk") {
                 sentence = sentence.replace("lmk", "let me know")
             }
-            if (sentence.includes("brb") && sentenceWords[a] == "brb") {
+            if (sentenceWords[a] == "brb") {
                 sentence = sentence.replace("brb", "be right back")
             }
-            if (sentence.includes("tba") && sentenceWords[a] == "tba") {
+            if (sentenceWords[a] == "tba") {
                 sentence = sentence.replace("tba", "to be announced")
             }
-            if (sentence.includes("tbc") && sentenceWords[a] == "tbc") {
+            if (sentenceWords[a] == "tbc") {
                 sentence = sentence.replace("tbc", "to be confirmed")
             }
-            if (sentence.includes("it's") && sentenceWords[a] == "it's") {
+            if (sentenceWords[a] == "it's") {
                 sentence = sentence.replace("it's", "it is")
             }
-            if (sentence.includes("alot") && sentenceWords[a] == "alot") {
+            if (sentenceWords[a] == "alot") {
                 sentence = sentence.replace("alot", "a lot")
             }
-            if (sentence.includes("btw") && sentenceWords[a] == "btw") {
+            if (sentenceWords[a] == "btw") {
                 sentence = sentence.replace("btw", "by the way")
             }
-            if (sentence.includes("afk") && sentenceWords[a] == "afk") {
+            if (sentenceWords[a] == "afk") {
                 sentence = sentence.replace("afk", "away from keyboard")
             }
-            if (sentence.includes("i'm") && sentenceWords[a] == "i'm") {
+            if (sentenceWords[a] == "i'm") {
                 sentence = sentence.replace("i'm", "I am")
             }
-            if (sentence.includes("i'm") && sentenceWords[a] == "i'm") {
+            if (sentenceWords[a] == "i'm") {
                 sentence = sentence.replace("i'm", "I am")
             }
-            if (sentence.includes("il") && sentenceWords[a] == "il") {
+            if (sentenceWords[a] == "il") {
                 sentence = sentence.replace("il", "I will")
             }
-            if (sentence.includes("rn") && sentenceWords[a] == "rn") {
+            if (sentenceWords[a] == "rn") {
                 sentence = sentence.replace("rn", "right now")
             }
-            if (sentence.includes("i") && sentenceWords[a] == "i") {
+            if (sentenceWords[a] == "i") {
                 sentence = sentence.replace(" i ", " I ")
+            }
+            if (sentenceWords[a] == "idk") {
+                sentence = sentence.replace("idk", "I do not know")
             }
         }
     }
