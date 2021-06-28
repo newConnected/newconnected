@@ -1,0 +1,139 @@
+@media (min-width:1000px) {
+    body {
+        background: rgb(36,0,20);
+        background: linear-gradient(90deg,rgb(0, 68, 255) 0%, rgb(0, 255, 128) 100%);
+    }
+    .menuBar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 7%;
+        background-color: rgb(22, 22, 22);
+    }
+
+    .homeButton {
+        position: absolute;
+        left: 1%;
+        top: 15%;
+        width: 16%;
+        height: 70%;
+        -webkit-border-radius: 10;
+        -moz-border-radius: 10;
+        border-radius: 5px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 25px;
+        background: #383838;
+        background: linear-gradient(90deg,rgb(0, 156, 104) 0%, rgb(0, 19, 126) 100%);
+        border: solid #1f628d 0px;
+        text-decoration: none;
+    }
+    
+    .homeButton:hover {
+        background: #5c5c5c;
+        background: linear-gradient(90deg,rgb(0, 255, 170) 0%, rgb(0, 38, 255) 100%);
+        text-decoration: none;
+    }
+
+    .version {
+        position: absolute;
+        right: 1%;
+        top: 15%;
+        width: 16%;
+        height: 70%;
+        -webkit-border-radius: 10;
+        -moz-border-radius: 10;
+        border-radius: 5px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 25px;
+        background: #383838;
+        background: linear-gradient(90deg,rgb(0, 94, 156) 0%, rgb(0, 19, 126) 100%);
+        border: solid #1f628d 0px;
+        text-decoration: none;
+    }
+
+    #pageTitle {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        color: white;
+        font-family: Arial;
+    }
+
+    #ashesTrailer {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+
+    #info {
+        position: absolute;
+        top: 10%;
+        left: 42%;
+        color: white;
+        font-family: Arial;
+    }
+}
+
+@media (max-width:1000px) {
+    body {
+        background: rgb(36,0,20);
+        background: linear-gradient(90deg,rgb(0, 68, 255) 0%, rgb(0, 255, 128) 100%);
+    }
+    .menuBar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 7%;
+        background-color: rgb(22, 22, 22);
+    }
+
+    .homeButton {
+        position: absolute;
+        left: 1%;
+        top: 15%;
+        width: 45%;
+        height: 70%;
+        -webkit-border-radius: 10;
+        -moz-border-radius: 10;
+        border-radius: 5px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 25px;
+        background: #383838;
+        background: linear-gradient(90deg,rgb(0, 156, 104) 0%, rgb(0, 19, 126) 100%);
+        border: solid #1f628d 0px;
+        text-decoration: none;
+    }
+    
+    .homeButton:hover {
+        background: #5c5c5c;
+        background: linear-gradient(90deg,rgb(0, 255, 170) 0%, rgb(0, 38, 255) 100%);
+        text-decoration: none;
+    }
+
+    #pageTitle {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        color: white;
+        font-family: Arial;
+    }
+
+    #ashesTrailer {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+
+    #info {
+        position: absolute;
+        top: 10%;
+        left: 42%;
+        color: white;
+        font-family: Arial;
+    }
+}
