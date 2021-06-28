@@ -61,6 +61,20 @@
         color: white;
         font-family: Arial;
     }
+
+    #ashesTrailer {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+
+    #info {
+        position: absolute;
+        top: 10%;
+        left: 42%;
+        color: white;
+        font-family: Arial;
+    }
 }
 
 @media (max-width:1000px) {
@@ -105,6 +119,20 @@
         position: absolute;
         top: 10%;
         left: 5%;
+        color: white;
+        font-family: Arial;
+    }
+
+    #ashesTrailer {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+
+    #info {
+        position: absolute;
+        top: 10%;
+        left: 42%;
         color: white;
         font-family: Arial;
     }
