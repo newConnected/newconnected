@@ -1,8 +1,8 @@
-images = ["smile.png", "unsure.png", "sad.png"]
+images = ["data/images/smile.png", "data/images/unsure.png", "data/images/sad.png"]
 imageChange = [
-    ["smile.png", "happy.png"], 
-    ["unsure.png"], 
-    ["sad.png"]
+    ["data/images/smile.png", "data/images/happy.png"], 
+    ["data/images/unsure.png"], 
+    ["data/images/sad.png"]
 ]
 
 function addEmotion() {
