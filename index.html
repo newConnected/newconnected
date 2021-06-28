@@ -5,43 +5,17 @@
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>newConnected</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel='stylesheet' type='text/css' media='screen' href='styles/style.css'>
-        <script src='scripts/textToSpeech.js'></script>
-        <script src='scripts/speechRecog.js'></script>
-        <script src='scripts/chatBot.js'></script>
-        <script src='scripts/languageRecog.js'></script>
-        <script src='scripts/grammarRecog.js'></script>
-        <script src='scripts/saveData.js'></script>
-        <script src='scripts/faces.js'></script>
+        <link rel='stylesheet' type='text/css' media='screen' href='styles/home.css'>
     </head>
     <body>
         <div class="menuBar">
             <button class="homeButton" onclick="window.location.href='index.html'"><b>NewConnected</b></button>
-            <button class="downloadsButton" onclick="window.location.href='downloads.html'">download page</button>
             <div class="version"><center>v 2.2.2</center></div>
         </div>
-
-        <button class="TTSButton" id="TTSButton" onclick="TTSSpeak()">Text to speech</button>
-        <input type="text" class="TTSInput" id="txtInput" oninput="chatProcess()" onchange="chatProcess()" placeholder="start by typing here">
-        <button class="chatBot" id="chatBotOut">Hey!</button>
-        <button class="langRecog" id="langRecogOut" onclick="selectedLanguage()">language: English</button>
-        <textarea type="text" class="grammarRecog" id="grammarRecog" placeholder="grammar fix" rows="4"></textarea>
-
-        <button id='btnGiveCommand' class="STTButton" onclick="startListening()">Start talking.</button>
-        <button id='message' class="STTInput"></button>
-
-        <a href="https://drive.google.com/drive/folders/1oa1jOco0OmJsY_Sg1fIvy-hsPrFAcFQb?usp=sharing" class="MobileApp">
-            download the mobile app (latest release)
-        </a>
-        <div id="options" style="display: none;">
-            <button class="option_layout option1" id="lang1" onclick="language1()">english</button>
-            <button class="option_layout option2" id="lang2" onclick="language4()">deutch</button>
-            <button class="option_layout option3" id="lang3" onclick="language2()">dutch</button>
-            <button class="option_layout option4" id="lang4" onclick="language3()">french</button>
-            <button class="option_layout option5" id="lang5" onclick="language5()">recognize (default)</button>
-        </div>
-        <div id="faces" class="faces">
-            <img src="faces/smile.png" class="face" id="face">
+        <div class="pageList">
+            <button class="page1" id="pageButtonStyle" onclick="window.location.href='home.html'"><b>NewConnected</b></button>
+            <button class="page2" id="pageButtonStyle" onclick="window.location.href='downloads.html'"><b>Downloads</b></button>
+            <button class="page3" id="pageButtonStyle" onclick="window.location.href='ashes.html'"><b>Ashes</b></button>
         </div>
     </body>
 </html>
