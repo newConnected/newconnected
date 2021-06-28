@@ -1,0 +1,63 @@
+@media (min-width:1000px) {
+    .socialsLink1 {
+        position: absolute;
+        left: 2%;
+        top: 30%;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .socialsLink1:hover {
+        background: #5c5c5c;
+        text-decoration: none;
+    }
+
+    .socialsLink2 {
+        position: absolute;
+        left: 12%;
+        top: 30%;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .socialsLink2:hover {
+        background: #5c5c5c;
+        text-decoration: none;
+    }
+}
+
+@media (max-width:1000px) {
+    .socialsLink1 {
+        position: absolute;
+        left: 2%;
+        top: 30%;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .socialsLink1:hover {
+        background: #5c5c5c;
+        text-decoration: none;
+    }
+
+    .socialsLink2 {
+        position: absolute;
+        left: 12%;
+        top: 30%;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .socialsLink2:hover {
+        background: #5c5c5c;
+        text-decoration: none;
+    }
+}
