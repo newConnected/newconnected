@@ -123,6 +123,12 @@
         top: 10%;
         left: 37%;
     }
+
+    .page4 {
+        position: absolute;
+        top: 10%;
+        left: 55%;
+    }
 }
 
 @media (max-width:1000px) {
@@ -183,5 +189,59 @@
         left: 42%;
         color: white;
         font-family: Arial;
+    }
+
+    .pageList {
+        background-color: rgb(22, 22, 22);
+        position: absolute;
+        top: 10%;
+        left: 3%;
+        height: 10%;
+        width: 94%;
+    }
+
+    #pageButtonStyle {
+        width: 16%;
+        height: 80%;
+        -webkit-border-radius: 10;
+        -moz-border-radius: 10;
+        border-radius: 5px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 25px;
+        background: #383838;
+        background: linear-gradient(90deg,rgb(0, 156, 104) 0%, rgb(0, 19, 126) 100%);
+        border: solid #1f628d 0px;
+        text-decoration: none;
+    }
+
+    #pageButtonStyle:hover {
+        background: #5c5c5c;
+        background: linear-gradient(90deg,rgb(0, 255, 170) 0%, rgb(0, 38, 255) 100%);
+        text-decoration: none;
+    }
+
+    .page1 {
+        position: absolute;
+        top: 10%;
+        left: 1%;
+    }
+
+    .page2 {
+        position: absolute;
+        top: 10%;
+        left: 19%;
+    }
+
+    .page3 {
+        position: absolute;
+        top: 10%;
+        left: 37%;
+    }
+
+    .page4 {
+        position: absolute;
+        top: 10%;
+        left: 55%;
     }
 }
